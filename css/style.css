@@ -1,0 +1,169 @@
+/* ============================================
+   RESET
+   Browsers add their own default spacing and
+   styles. This removes them so we start fresh.
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   VARIABLES
+   Define your colors and fonts once here.
+   To change the whole site's look, just edit
+   these values — nothing else needs to change.
+   ============================================ */
+:root {
+  --bg:        #F8F7F4;
+  --text:      #2C2C2C;
+  --accent:    #4A7C7E;
+  --lines:     #E0E0E0;
+  --highlight: #C9A96E;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'Courier New', monospace;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   Rules here apply to every page on the site.
+   ============================================ */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--lines);
+  padding: 0 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--text);
+  letter-spacing: 0.5px;
+  white-space: nowrap;  /* prevents the name from wrapping to two lines */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin-left: 48px;
+}
+
+.nav-links a {
+  font-size: 0.78rem;
+  color: var(--text);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-weight: 500;
+  white-space: nowrap;  /* prevents each link from wrapping */
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px);
+  text-align: center;
+  padding: 60px;
+}
+
+.hero-label {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 480px;
+  margin: 0 auto 36px;
+  line-height: 1.8;
+}
+
+.hero-divider {
+  width: 50px;
+  height: 2px;
+  background-color: var(--highlight);
+  margin: 0 auto 36px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  text-align: center;
+  padding: 28px;
+  border-top: 1px solid var(--lines);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #aaa;
+}
